@@ -1,3 +1,9 @@
+import type {PermissionState} from "@capacitor/core";
+
 export interface DynamicColorPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  getDynamicColors() : Promise<{primary: string, secondary: string, tertiary: string}>
+}
+
+export interface PermissionStatus {
+  storage: PermissionState
 }
